@@ -1,4 +1,5 @@
 import { OpenAI } from "openai";
+import { encoding_for_model } from "tiktoken";
 
 const openAI = new OpenAI({
   apiKey: process.env.AI_API_KEY,
@@ -15,4 +16,12 @@ async function main() {
   console.log(response.choices[0].message)
 }
 
-main();
+function encodePrompt() {
+  const prompt = ""
+  const encoder = encoding_for_model("chatgpt-4o-latest")
+  const words = encoder.encode(prompt);
+  console.log(words)
+}
+
+main()
+encodePrompt();

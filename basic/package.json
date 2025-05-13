@@ -10,7 +10,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "openai": "^4.98.0"
+    "openai": "^4.98.0",
+    "tiktoken": "^1.0.21"
   },
   "devDependencies": {
     "@types/node": "^22.15.17",
